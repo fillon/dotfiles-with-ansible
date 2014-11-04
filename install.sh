@@ -5,7 +5,7 @@ cd ~/.dotfiles
 
 echo "Linking dot files ..."
 for file in .*; do
-  ln -s "`pwd`/$file" "$HOME/$file"
+  ln -sf "`pwd`/$file" "$HOME/$file"
 done
 
 echo "Installing brew apps"
