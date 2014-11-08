@@ -1,0 +1,6 @@
+[local]
+localhost
+
+[local:vars]
+user=ivelazquez
+home=/Users/{{user}}

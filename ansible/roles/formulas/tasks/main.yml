@@ -1,0 +1,5 @@
+---
+- name: Installing Brew formulas
+  sudo: no
+  homebrew: name={{ item }} state=installed
+  with_items: formulas

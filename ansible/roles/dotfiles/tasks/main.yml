@@ -1,0 +1,5 @@
+---
+- name: Creating dotfiles
+  sudo: no
+  template: src={{ item }}.tpl dest=~/.{{ item }}
+  with_items: dotfiles

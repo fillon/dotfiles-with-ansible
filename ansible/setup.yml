@@ -1,0 +1,42 @@
+---
+- name: 
+  hosts: local
+  connection: local
+  sudo: yes
+  sudo_user: "{{ user }}"
+  vars:
+    dotfiles:
+      - bashrc
+      - bash_profile
+      - bash_aliases
+      - gitconfig
+    formulas:
+      - bash-completion
+    apps:
+      # - totalspaces
+      - vlc
+      - jdownloader
+      - mkvtools
+      - the-unarchiver
+      - plex-home-theater
+      - adobe-reader
+      - flash-player
+      - skype
+      - spotify
+      - transmission
+      - google-chrome
+      - firefox
+      - phpstorm
+      - iterm2
+      - sublime-text
+      - sourcetree
+      - virtualbox
+      - vagrant
+      - vagrant-manager
+      - filezilla
+      - mysqlworkbench
+      - robomongo
+  roles:
+    - dotfiles
+    - formulas
+    - apps

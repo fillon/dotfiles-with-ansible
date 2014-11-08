@@ -1,0 +1,5 @@
+---
+- name: Installing Brew Cask apps
+  sudo: no
+  homebrew_cask: name={{ item }} state=installed
+  with_items: apps
