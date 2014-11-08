@@ -1,23 +1,37 @@
+function title {
+	reset="\033[0m"
+	yellow="\033[1;33m"
+	purple="\033[1;35m"
+	echo -e "\n$yellow>>>$purple $1 $reset\n"
+}
+
+# Clearing the terminal
+clear
+
 # Install xcode terminal tools
-echo "Installing Xcode command tools"
+title "Installing Xcode command tools"
 xcode-select --install
 
 # Installing basic packages
-echo "Installing Brew and Brew Cask"
+title "Installing Brew and Brew Cask"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install caskroom/cask/brew-cask
 brew update
 
-echo "Installing primary formulas"
+title "Installing primary formulas"
 brew install git
 brew install ansible
 
-
-echo "Cloning repo to ~/.dotfiles"
+# Updating repository
+title "Cloning repo to ~/.dotfiles"
 if [ -d ~/.dotfiles ]; then
 	git clone git@github.com:nass600/dotfiles.git ~/.dotfiles
+	cd ~/.dotfiles
+else
+	cd ~/dotfiles
+	git pull origin master
 fi
-cd ~/.dotfiles
 
-echo "Running Ansible playbook"
+# Installing packages via Ansible
+title "Running Ansible playbook"
 ansible-playbook ansible/setup.yml
