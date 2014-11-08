@@ -2,7 +2,6 @@
 
 My dotfiles configuration
 
-<br>
 
 ## Installation
 
@@ -10,8 +9,10 @@ My dotfiles configuration
 curl -L https://raw.github.com/nass600/dotfiles/master/install.sh | sh
 ```
 
-<br>
-
 ## License
 
 [MIT](LICENSE)
+
+## Author
+
+Ignacio Velazquez ([http://ignaciovelazquez.es]())
