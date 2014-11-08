@@ -15,4 +15,4 @@ curl -L https://raw.github.com/nass600/dotfiles/master/install.sh | sh
 
 ## Author
 
-Ignacio Velazquez ([http://ignaciovelazquez.es]())
+[Ignacio Velazquez](http://ignaciovelazquez.es)
