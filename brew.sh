@@ -9,7 +9,9 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install caskroom/cask/brew-cask
 brew update
 
+brew install git
 brew install ansible
+
 
 # Apps
 brew cask install totalspaces
