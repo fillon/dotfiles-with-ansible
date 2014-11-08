@@ -8,6 +8,10 @@ function title {
 # Clearing the terminal
 clear
 
+# Ask for the administrator password upfront
+title "Please, enter your admin password"
+sudo -v
+
 # Install xcode terminal tools
 title "Installing Xcode command tools"
 xcode-select --install
@@ -35,3 +39,6 @@ fi
 # Installing packages via Ansible
 title "Running Ansible playbook"
 ansible-playbook ansible/setup.yml
+
+title "Configuring OS X Yosemite"
+./.osx
