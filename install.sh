@@ -29,11 +29,11 @@ brew install ansible
 # Updating repository
 title "Cloning repo to ~/.dotfiles"
 if [ -d ~/.dotfiles ]; then
+	cd ~/.dotfiles
+	git pull origin master
+else
 	git clone git@github.com:nass600/dotfiles.git ~/.dotfiles
 	cd ~/.dotfiles
-else
-	cd ~/dotfiles
-	git pull origin master
 fi
 
 # Installing packages via Ansible
