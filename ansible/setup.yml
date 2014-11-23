@@ -13,7 +13,7 @@
       - gitignore
     formulas:
       - bash-completion
-    apps:
+    casks:
       # - totalspaces
       - vlc
       - jdownloader
@@ -42,4 +42,4 @@
   roles:
     - dotfiles
     - formulas
-    - apps
+    - casks

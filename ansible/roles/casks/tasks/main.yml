@@ -2,4 +2,4 @@
 - name: Installing Brew Cask apps
   sudo: no
   command: brew cask install {{ item }} --appdir="/Applications"
-  with_items: apps
+  with_items: casks
