@@ -10,6 +10,7 @@
       - bash_profile
       - bash_aliases
       - gitconfig
+      - gitignore
     formulas:
       - bash-completion
     apps:
@@ -25,6 +26,7 @@
       - spotify
       - transmission
       - google-drive
+      - istat-menus
       - google-chrome
       - firefox
       - phpstorm

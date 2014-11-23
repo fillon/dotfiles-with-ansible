@@ -1,3 +1,5 @@
+#!/bin/sh
+
 function title {
 	reset="\033[0m"
 	yellow="\033[1;33m"
