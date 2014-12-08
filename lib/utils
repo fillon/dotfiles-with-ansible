@@ -1,20 +1,8 @@
 #!/bin/sh
 
-# Coloured title
-title() {
-	reset="\033[0m"
-	yellow="\033[1;33m"
-	purple="\033[1;35m"
-	echo "\n$yellow>>>$purple $1 $reset\n"
-}
-
-# Test whether a command exists
-# $1 - cmd to test
-type_exists() {
-    if [ $(type -P $1) ]; then
-      return 0
-    fi
-    return 1
+# Header logging
+e_header() {
+    printf "\n$(tput setaf 7)%s$(tput sgr0)\n" "$@"
 }
 
 # Success logging
@@ -30,6 +18,15 @@ e_error() {
 # Warning logging
 e_warning() {
     printf "$(tput setaf 136)! %s$(tput sgr0)\n" "$@"
+}
+
+# Test whether a command exists
+# $1 - cmd to test
+type_exists() {
+    if [ $(type -P $1) ]; then
+      return 0
+    fi
+    return 1
 }
 
 # Ask for confirmation before proceeding

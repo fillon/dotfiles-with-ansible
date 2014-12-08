@@ -25,7 +25,7 @@ cd ${DOTFILES_DIRECTORY}
 source ./lib/utils
 
 # Ask for the administrator password upfront
-title "Please, enter your admin password"
+e_header "Please, enter your admin password"
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `osx` has finished
@@ -33,7 +33,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Install xcode terminal tools
 if ! type_exists 'gcc'; then
-    title "Installing Xcode command tools"
+    e_header "Installing Xcode command tools"
     xcode-select --install
 
     # Ask before potentially overwriting OS X defaults
@@ -48,7 +48,7 @@ fi
 
 # Check for Homebrew
 if ! type_exists 'brew'; then
-    title "Installing Brew"
+    e_header "Installing Brew"
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     brew update
     brew upgrade
@@ -56,19 +56,19 @@ fi
 
 # Check for Homebrew Cask
 if ! type_exists 'brew cask'; then
-    title "Installing Brew Cask"
+    e_header "Installing Brew Cask"
     brew install caskroom/cask/brew-cask
 fi
 
 # Check for git
 if ! type_exists 'git'; then
-    title "Installing git"
+    e_header "Installing git"
     brew install git
 fi
 
 # Check for ansible
 if ! type_exists 'ansible'; then
-    title "Installing ansible"
+    e_header "Installing ansible"
     brew install ansible
 fi
 
@@ -86,7 +86,7 @@ if ! is_git_repo; then
 fi
 
 # Installing packages via Ansible
-title "Running Ansible playbook"
+e_header "Running Ansible playbook"
 ansible-playbook ansible/setup.yml
 
 # Ask before potentially overwriting OS X defaults
