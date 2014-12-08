@@ -1,0 +1,68 @@
+#!/bin/sh
+
+# include utils
+source ./lib/utils
+
+# Clearing the terminal
+clear
+
+# Ask for the administrator password upfront
+title "Please, enter your admin password"
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `osx` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+# Install xcode terminal tools
+title "Installing Xcode command tools"
+xcode-select --install
+
+# Check for Homebrew
+if ! type_exists 'brew'; then
+    title "Installing Brew"
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    brew update
+    brew upgrade
+fi
+
+# Check for Homebrew Cask
+if ! type_exists 'brew cask'; then
+    title "Installing Brew Cask"
+    brew install caskroom/cask/brew-cask
+fi
+
+# Check for git
+if ! type_exists 'git'; then
+    title "Installing git"
+    brew install git
+fi
+
+# Check for ansible
+if ! type_exists 'git'; then
+    title "Installing ansible"
+    brew install ansible
+fi
+
+# Updating repository
+title "Cloning repo to ~/.dotfiles"
+if [ -d ~/.dotfiles ]; then
+	cd ~/.dotfiles
+	git pull origin master
+else
+	git clone git@github.com:nass600/dotfiles.git ~/.dotfiles
+	cd ~/.dotfiles
+fi
+
+# Installing packages via Ansible
+title "Running Ansible playbook"
+ansible-playbook ansible/setup.yml
+
+# Ask before potentially overwriting OS X defaults
+seek_confirmation "Warning: This step may modify your OS X system defaults."
+
+if is_confirmed; then
+    bash ./bin/osx
+    e_success "OS X settings updated! You may need to restart."
+else
+    printf "Skipped OS X settings update.\n"
+fi

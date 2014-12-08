@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 # Menu bar
 defaults write com.apple.menuextra.battery ShowPercent -string “YES”
