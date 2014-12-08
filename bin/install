@@ -67,19 +67,22 @@ if ! type_exists 'git'; then
 fi
 
 # Check for ansible
-if ! type_exists 'git'; then
+if ! type_exists 'ansible'; then
     title "Installing ansible"
     brew install ansible
 fi
 
-# Updating repository
-title "Cloning repo to ~/.dotfiles"
-if [ -d ~/.dotfiles ]; then
-	cd ~/.dotfiles
-	git pull origin master
-else
-	git clone git@github.com:nass600/dotfiles.git ~/.dotfiles
-	cd ~/.dotfiles
+# Initialize the git repository if it's missing
+if ! is_git_repo; then
+    e_header "Initializing git repository..."
+    git init
+    git remote add origin ${DOTFILES_GIT_REMOTE}
+    git fetch origin master
+    # Reset the index and working tree to the fetched HEAD
+    # (submodules are cloned in the subsequent sync step)
+    git reset --hard FETCH_HEAD
+    # Remove any untracked files
+    git clean -fd
 fi
 
 # Installing packages via Ansible

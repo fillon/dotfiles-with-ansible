@@ -47,3 +47,8 @@ is_confirmed() {
     fi
     return 1
 }
+
+# Test whether we're in a git repo
+is_git_repo() {
+    $(git rev-parse --is-inside-work-tree &> /dev/null)
+}
