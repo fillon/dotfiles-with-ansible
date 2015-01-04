@@ -57,16 +57,16 @@ if ! type_exists 'brew'; then
 fi
 
 # Check for Homebrew Cask
-if ! type_exists 'brew cask'; then
-    e_header "Installing Brew Cask"
-    brew install caskroom/cask/brew-cask
-fi
+#if ! type_exists 'brew cask'; then
+#    e_header "Installing Brew Cask"
+#    brew install caskroom/cask/brew-cask
+#fi
 
 # Check for git
-if ! type_exists 'git'; then
-    e_header "Installing git"
-    brew install git
-fi
+#if ! type_exists 'git'; then
+#    e_header "Installing git"
+#    brew install git
+#fi
 
 # Check for ansible
 if ! type_exists 'ansible'; then

@@ -1,3 +1,5 @@
 ---
 formulas:
   - bash-completion
+  - brew-cask
+  - git
