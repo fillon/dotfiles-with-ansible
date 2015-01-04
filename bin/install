@@ -56,39 +56,14 @@ if ! type_exists 'brew'; then
     brew upgrade
 fi
 
-# Check for Homebrew Cask
-#if ! type_exists 'brew cask'; then
-#    e_header "Installing Brew Cask"
-#    brew install caskroom/cask/brew-cask
-#fi
-
-# Check for git
-#if ! type_exists 'git'; then
-#    e_header "Installing git"
-#    brew install git
-#fi
-
 # Check for ansible
 if ! type_exists 'ansible'; then
     e_header "Installing ansible"
     brew install ansible
 fi
 
-## Initialize the git repository if it's missing
-#if ! is_git_repo; then
-#    e_header "Initializing git repository..."
-#    git init
-#    git remote add origin ${DOTFILES_GIT_REMOTE}
-#    git fetch origin master
-#    # Reset the index and working tree to the fetched HEAD
-#    # (submodules are cloned in the subsequent sync step)
-#    git reset --hard FETCH_HEAD
-#    # Remove any untracked files
-#    git clean -fd
-#fi
-
 # Installing packages via Ansible
-e_header "Running Ansible playbook"
+e_header "Running Ansible provisioning"
 ansible-playbook ansible/setup.yml
 
 # Ask before potentially overwriting OS X defaults
