@@ -1,0 +1,7 @@
+---
+dotfiles:
+  - bashrc
+  - bash_profile
+  - bash_aliases
+  - gitconfig
+  - gitignore

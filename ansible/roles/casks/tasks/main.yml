@@ -1,5 +1,12 @@
 ---
+- name: Check for installed Casks
+  shell: brew cask list | grep {{ item }}
+  register: installed_applications
+  with_items: casks
+  ignore_errors: true
+
 - name: Installing Brew Cask apps
   sudo: no
   command: brew cask install {{ item }} --appdir="/Applications"
   with_items: casks
+  when: item not in installed_applications.results|map(attribute='stdout')
