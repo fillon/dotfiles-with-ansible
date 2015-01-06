@@ -6,7 +6,7 @@ My dotfiles configuration
 ## Installation
 
 ```bash
-curl -L https://raw.github.com/nass600/dotfiles/master/bin/install | sh
+sh <(curl -L https://raw.github.com/nass600/dotfiles/master/bin/install)
 ```
 
 ## License
