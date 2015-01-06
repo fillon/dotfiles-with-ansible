@@ -1,5 +1,5 @@
 ---
 formulas:
   - bash-completion
-  - brew-cask
+  - caskroom/cask/brew-cask
   - git
