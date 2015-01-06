@@ -1,4 +1,8 @@
 ---
+- name: Tapping Brew repos
+  command: brew tap {{ item }}
+  with_items: taps
+  
 - name: Installing Brew formulas
   sudo: no
   homebrew: name={{ item }} state=installed
