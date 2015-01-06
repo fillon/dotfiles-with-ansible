@@ -1,5 +1,7 @@
 ---
+taps:
+  - caskroom/cask
 formulas:
   - bash-completion
-  - caskroom/cask/brew-cask
+  - brew-cask
   - git
