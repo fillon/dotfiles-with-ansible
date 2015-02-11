@@ -25,3 +25,5 @@ casks:
   - filezilla
   - mysqlworkbench
   - robomongo
+  - renamer
+  - kaleidoscope
