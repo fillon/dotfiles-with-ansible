@@ -27,3 +27,7 @@ casks:
   - robomongo
   - renamer
   - kaleidoscope
+  - calibre
+  - synology-cloud-station
+  - invisionsync
+  - filebot
