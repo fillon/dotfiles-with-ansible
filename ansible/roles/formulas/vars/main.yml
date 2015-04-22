@@ -1,7 +1,9 @@
 ---
 taps:
   - caskroom/cask
+  - homebrew/binary
 formulas:
   - bash-completion
   - brew-cask
   - git
+  - rar
