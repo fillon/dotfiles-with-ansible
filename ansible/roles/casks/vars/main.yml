@@ -32,3 +32,4 @@ casks:
   - synology-cloud-station
   - invisionsync
   - filebot
+  - slack
