@@ -1,0 +1,9 @@
+---
+packages:
+  - atom-beautify
+  - jshint
+  - merge-conflicts
+  - terminal-panel
+  - git-plus
+  - minimap
+  - file-icons
