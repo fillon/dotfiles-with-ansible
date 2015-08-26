@@ -1,0 +1,5 @@
+- name: Install node packages
+- npm: name=grunt global=yes
+- npm: name=grunt-cli global=yes
+- npm: name=bower global=yes
+- npm: name=http-server global=yes
