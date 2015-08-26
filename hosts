@@ -2,5 +2,5 @@
 localhost
 
 [local:vars]
-user=nass600
+user=joseangel
 home=/Users/{{user}}

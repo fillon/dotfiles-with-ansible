@@ -4,8 +4,8 @@
 clear
 
 DOTFILES_DIRECTORY="${HOME}/.dotfiles"
-DOTFILES_TARBALL_PATH="https://github.com/nass600/dotfiles/tarball/master"
-DOTFILES_GIT_REMOTE="git@github.com:nass600/dotfiles.git"
+DOTFILES_TARBALL_PATH="https://github.com/j8seangel/dotfiles/tarball/master"
+DOTFILES_GIT_REMOTE="git@github.com:j8seangel/dotfiles.git"
 
 # Download and extract the dotfiles repository
 if [[ -d ${DOTFILES_DIRECTORY} ]]; then
