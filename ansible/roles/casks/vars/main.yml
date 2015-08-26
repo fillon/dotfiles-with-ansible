@@ -1,6 +1,8 @@
 ---
 casks:
   - vlc
+  - the-unarchiver
+  - tuxera-ntfs
   - java
   - skype
   - spotify
