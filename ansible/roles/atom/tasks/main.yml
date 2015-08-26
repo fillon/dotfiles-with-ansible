@@ -1,6 +1,6 @@
 ---
 - name: Prepare apm
-  shell:
+- file: /usr/local/bin dest=/Applications/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm state=link
 
 
 //  Install Shell Commands. This creates two symlinks in /usr/local/bin
