@@ -18,7 +18,6 @@ casks:
   - google-hangouts
   - google-drive
   - firefox
-  - iterm2
   - atom
   - node
   - github-desktop
