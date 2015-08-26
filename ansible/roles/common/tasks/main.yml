@@ -2,5 +2,5 @@
 - name: Creating Workspace
   file: path={{ home }}/Workspace state=directory
 
-- name: Adding SSH agent
-  command: ssh-add
+# - name: Adding SSH agent
+#   command: ssh-add
