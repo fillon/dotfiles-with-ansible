@@ -12,7 +12,9 @@ casks:
   - google-chrome
   - firefox
   - iterm2
+  - atom
   - node
+  - github-desktop
   - sourcetree
   - vagrant
   - vagrant-manager
