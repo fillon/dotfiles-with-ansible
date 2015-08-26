@@ -2,4 +2,4 @@
 
 # Menu bar
 defaults write com.apple.menuextra.battery ShowPercent -string “YES”
-//defaults write /Library/Preferences/.GlobalPreferences AppleInterfaceTheme Dark
+#defaults write /Library/Preferences/.GlobalPreferences AppleInterfaceTheme Dark
