@@ -3,13 +3,20 @@ casks:
   - vlc
   - the-unarchiver
   - tuxera-ntfs
+  - clipmenu
+  - todoist
   - java
+  - mailbox
+  - chitchat
+  - todoist
+  - slack
   - skype
   - spotify
   - transmission
-  - google-drive
   - istat-menus
   - google-chrome
+  - google-hangouts
+  - google-drive
   - firefox
   - iterm2
   - atom
@@ -20,5 +27,3 @@ casks:
   - vagrant-manager
   - virtualbox
   - filezilla
-  - slack
-  - clipmenu
