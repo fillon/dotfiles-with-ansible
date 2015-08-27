@@ -1,0 +1,13 @@
+- name: Installing Atom
+  sudo: no
+  homebrew_cask: name=atom state=present
+
+- name: Add apm symlink
+  file: src=/Applications/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm dest=/usr/local/bin/apm state=link
+
+- name: Add atom symlink
+  file: src=/Applications/Atom.app/Contents/Resources/app/atom.sh dest=/usr/local/bin/atom state=link
+
+- name: Install atom packages
+  command: apm install {{ item }}
+  with_items: atom_packages

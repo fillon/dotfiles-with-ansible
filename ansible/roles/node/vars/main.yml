@@ -1,0 +1,6 @@
+---
+node_modules:
+    - grunt
+    - grunt-cli
+    - bower
+    - http-server
