@@ -1,8 +1,13 @@
----
-- name: Prepare apm
-- file: /usr/local/bin dest=/Applications/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm state=link
+- name: Installing Atom
+  sudo: no
+  homebrew_cask: name=atom state=present
 
+- name: Add apm symlink
+  file: src=/Applications/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm dest=/usr/local/bin/apm state=link
 
-//  Install Shell Commands. This creates two symlinks in /usr/local/bin
-apm -> /Applications/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm
-atom -> /Applications/Atom.app/Contents/Resources/app/atom.sh
+- name: Add atom symlink
+  file: src=/Applications/Atom.app/Contents/Resources/app/atom.sh dest=/usr/local/bin/atom state=link
+
+- name: Install atom packages
+  command: apm install {{ item }}
+  with_items: atom_packages

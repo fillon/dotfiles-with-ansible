@@ -1,5 +1,5 @@
 ---
-- name: 
+- name:
   hosts: local
   connection: local
   sudo: yes
@@ -9,3 +9,5 @@
     - dotfiles
     - formulas
     - casks
+    - node
+    - atom

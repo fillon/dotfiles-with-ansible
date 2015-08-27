@@ -1,5 +1,8 @@
-- name: Install node packages
-- npm: name=grunt global=yes
-- npm: name=grunt-cli global=yes
-- npm: name=bower global=yes
-- npm: name=http-server global=yes
+- name: Installing Node
+  sudo: no
+  homebrew_cask: name=node state=present
+
+- name: Installing node packages
+  sudo: yes
+  npm: name={{item}} global=yes state=present
+  with_items: node_modules
