@@ -2,6 +2,10 @@
   sudo: no
   homebrew_cask: name=node state=present
 
+- name: Make node_modoules folder accesible without sudo
+  sudo: yes
+  shell: sudo chown -R $(id -un):staff /usr/local/lib/node_modules
+  
 - name: Installing node packages
   sudo: yes
   npm: name={{item}} global=yes state=present
