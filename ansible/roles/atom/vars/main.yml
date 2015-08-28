@@ -1,5 +1,6 @@
 ---
 atom_packages:
+  - monokai
   - atom-beautify
   - jshint
   - merge-conflicts
