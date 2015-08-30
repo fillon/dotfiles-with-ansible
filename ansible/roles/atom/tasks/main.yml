@@ -2,6 +2,10 @@
   sudo: no
   homebrew_cask: name=atom state=present
 
+- name: Copying Atom config
+  sudo: no
+  copy: src=../config_files/ dest=~/.atom/
+
 - name: Add apm symlink
   file: src=/Applications/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm dest=/usr/local/bin/apm state=link
 

@@ -1,6 +1,7 @@
 ---
 casks:
   - vlc
+  - spectacle
   - the-unarchiver
   - tuxera-ntfs
   - clipmenu
