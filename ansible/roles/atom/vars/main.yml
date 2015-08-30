@@ -1,5 +1,6 @@
 ---
 atom_packages:
+  - emmet
   - atom-beautify
   - jshint
   - merge-conflicts
