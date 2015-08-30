@@ -16,3 +16,5 @@
   "atom-beautify":
     _analyticsUserId: "b64fba17-eb1c-422a-9a39-23a43a36c424"
   emmet: {}
+  "tree-view":
+    hideIgnoredNames: true
