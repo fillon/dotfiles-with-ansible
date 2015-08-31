@@ -4,7 +4,7 @@
   welcome:
     showOnStartup: false
   core:
-    projectHome: "/Users/joseangel/Workspace"
+    projectHome: "/Users/{{user}}/Workspace"
     themes: [
       "one-dark-ui"
       "monokai"

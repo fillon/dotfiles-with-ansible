@@ -1,4 +1,9 @@
 ---
+atom_config_files:
+  - config.cson
+  - keymap.cson
+  - projects.cson
+  - snippets.cson
 atom_packages:
   - emmet
   - atom-beautify

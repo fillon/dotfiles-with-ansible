@@ -64,7 +64,7 @@ fi
 
 # Installing packages via Ansible
 e_header "Running Ansible provisioning"
-ansible-playbook ansible/setup.yml
+ansible-playbook ansible/setup.yml --ask-sudo-pass
 
 # Ask before potentially overwriting OS X defaults
 seek_confirmation "Warning: This step may modify your OS X system defaults."

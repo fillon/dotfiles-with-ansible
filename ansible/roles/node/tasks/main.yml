@@ -1,12 +1,14 @@
 - name: Installing Node
-  sudo: no
-  homebrew_cask: name=node state=present
-
-- name: Make global node_modoules folder accesible without sudo
   sudo: yes
-  shell: chown -R $(id -un):staff /usr/local/lib/node_modules
+  sudo_user: root
+  homebrew_cask: name=node state=present
+#
+# - name: Make global node_modoules folder accesible without sudo
+#   sudo: yes
+#   shell: chown -R $(id -un):staff /usr/local/lib/node_modules
 
 - name: Installing node packages
   sudo: yes
+  sudo_user: root
   npm: name={{item}} global=yes state=present
   with_items: node_modules
