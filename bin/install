@@ -4,7 +4,7 @@
 clear
 
 DOTFILES_DIRECTORY="${HOME}/.dotfiles"
-DOTFILES_TARBALL_PATH="https://github.com/j8seangel/dotfiles/tarball/master"
+DOTFILES_TARBALL_PATH="https://github.com/j8seangel/dotfiles/tarball/nativead"
 DOTFILES_GIT_REMOTE="git@github.com:j8seangel/dotfiles.git"
 
 # Download and extract the dotfiles repository

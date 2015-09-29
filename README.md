@@ -6,7 +6,7 @@ My dotfiles configuration
 ## Installation
 
 ```bash
-sh <(curl -L https://raw.github.com/j8seangel/dotfiles/master/bin/install)
+sh <(curl -L https://raw.github.com/j8seangel/dotfiles/nativead/bin/install)
 ```
 
 ## License
