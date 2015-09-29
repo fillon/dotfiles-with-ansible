@@ -2,16 +2,16 @@
   sudo: no
   homebrew_cask: name=atom state=present
 
-- name: Copying Atom config
-  sudo: no
-  template: src={{item}} dest=~/.atom/{{item}}
-  with_items: atom_config_files
-
 - name: Add apm symlink
   file: src=/Applications/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm dest=/usr/local/bin/apm state=link
 
 - name: Add atom symlink
   file: src=/Applications/Atom.app/Contents/Resources/app/atom.sh dest=/usr/local/bin/atom state=link
+
+# - name: Copying Atom config
+#   sudo: no
+#   template: src={{item}} dest=~/.atom/{{item}}
+#   with_items: atom_config_files
 
 - name: Check for installed atom packages and install if empty
   shell: apm list | grep {{ item }} || apm install {{item}}

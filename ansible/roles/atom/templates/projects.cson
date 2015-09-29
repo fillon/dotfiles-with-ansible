@@ -1,25 +1,25 @@
 dotfiles:
   title: "dotfiles"
   paths: [
-    "/Users/joseangel/Workspace/dotfiles"
+    "/Users/{{user}}/Workspace/dotfiles"
   ]
 board:
   title: "board"
   paths: [
-    "/Users/joseangel/Workspace/nativead/board"
+    "/Users/{{user}}/Workspace/nativead/board"
   ]
 api:
   title: "api"
   paths: [
-    "/Users/joseangel/Workspace/nativead/api"
+    "/Users/{{user}}/Workspace/nativead/api"
   ]
 dashboard:
   title: "dashboard"
   paths: [
-    "/Users/joseangel/Workspace/nativead/dashboard"
+    "/Users/{{user}}/Workspace/nativead/dashboard"
   ]
 cocinando:
   title: "cocinando"
   paths: [
-    "/Users/joseangel/Workspace/htdocs/cocinando"
+    "/Users/{{user}}/Workspace/htdocs/cocinando"
   ]
