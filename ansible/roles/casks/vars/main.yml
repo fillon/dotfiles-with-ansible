@@ -6,7 +6,7 @@ casks:
   - tuxera-ntfs
   - clipmenu
   - java
- # - mailbox
+  - mailbox
   - chitchat
   - slack
   - skype

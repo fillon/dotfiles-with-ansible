@@ -10,3 +10,4 @@
   command: brew cask install {{ item }} --appdir="/Applications"
   with_items: casks
   when: item not in installed_applications.results|map(attribute='stdout')
+  ignore_errors: true
